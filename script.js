@@ -1,6 +1,7 @@
 function closeMenu() {
   console.log("menu sluiten");
 }
+
 //Voeg een keydown functie toe, waarbij je het geluid met de toetsenbord kan besturen. En voeg een keyCOde toe, elke toets op het toetenbord heeft een nummer. https://keycode.info/
 window.addEventListener('keydown', function(e){
   console.log(e.keyCode);
