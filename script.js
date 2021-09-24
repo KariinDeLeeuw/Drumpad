@@ -1,8 +1,12 @@
+window.onload = function(){
+    loadPad();
+}
+
 function closeMenu() {
   console.log("menu sluiten");
 }
 
-//Voeg een keydown functie toe, waarbij je het geluid met de toetsenbord kan besturen. En voeg een keyCOde toe, elke toets op het toetenbord heeft een nummer. https://keycode.info/
+//Voeg een keydown functie toe, waarbij je het geluid met de toetsenbord kan besturen. En voeg een keyCode toe, elke toets op het toetenbord heeft een nummer. https://keycode.info/
 window.addEventListener('keydown', function(e){
   console.log(e.keyCode);
 });
@@ -10,6 +14,23 @@ window.addEventListener('keydown', function(e){
 function playsound () {
   var geluid = new Audio('sounds/boom.wav');
   geluid.play();
+}
+
+//Hier wordt de drumpad geladen waarbij een for loop wordt gebruikt. Alle 9 drumpadSounds worden gelopen.
+function loadPad () {
+    var drumGrid = document.getElementById('drum-grid');
+    var drumItemString = "";
+    for (i = 0; i < 9; i++) {
+        drumItemString += `
+        <div class="drumpad-drum-item" data-key="${drumpadSounds[i].key}" style="background-color:${drumpadSounds[i].color}">
+          <div class="drumpad-img-wrapper">
+            <img src="${drumpadSounds[i].icon}" alt="img instrument">
+          </div>
+        </div>
+        `
+    }
+    console.log(drumItemString);
+    drumGrid.innerHTML = drumItemString;
 }
 
 //Hier komen alle geluiden in een array
