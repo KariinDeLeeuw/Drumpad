@@ -2,8 +2,16 @@ window.onload = function(){
     loadPad();
 }
 
+//Hier maken we het nav-menu zichtbaar door uit de styling display:none te veranderen naar display:flex
+function openMenu() {
+    console.log("open menu");
+    document.querySelector(".nav-menu").style.display = "flex";
+}
+
+//Hier hetzelfde maar dan terug naar display:none
 function closeMenu() {
   console.log("menu sluiten");
+  document.querySelector(".nav-menu").style.display = "none";
 }
 
 //Voeg een keydown functie toe, waarbij je het geluid met de toetsenbord kan besturen. En voeg een keyCode toe, elke toets op het toetenbord heeft een nummer. https://keycode.info/
