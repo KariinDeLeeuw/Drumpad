@@ -20,6 +20,16 @@ window.addEventListener('keydown', function(e) {
     playsound(e.keyCode);
   });
 
+  //Wanneer je klikt hoor je het geluid
+  function addClickFunction() {
+    var drumpadPads = document.querySelectorAll('.drumpad-drum-item');
+    drumpadPads.forEach(item => {
+      item.addEventListener('click', event => {
+        playsound(item.getAttribute("data-key"));
+      })
+    })
+  }
+
   function playsound(key) {
     for (i = 0; i < drumpadSounds.length; i++) {
       if (key == drumpadSounds[i].key) {
@@ -205,4 +215,4 @@ var drumpadSounds = [
       color:allSounds[8].color,
       icon: allSounds[8].icon
   }
-]
+];
