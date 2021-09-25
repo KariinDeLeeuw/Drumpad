@@ -8,91 +8,91 @@
   <title>Drumpad with HTML, CSS and JavaScript</title>
 </head>
 <body>
-	<!-- <button onclick="playsound()">Klik mij</button> -->
-	<div class="drumpad-wrapper">
-		<div class="drumpad-navbar">
-			<div class="drumpad-logo-wrapper">
-				<div class="drumpad-logo">
-					Drumpad
-				</div>
-			</div>
-			<div class="nav-menu">
-				<div class="nav-items-container">
-					<div class="nav-item-wrapper">
-						<label for="pad1">Pad 1</label>
-                <select name="pad1" id="pad1" data-key="103">
-                    <!-- options vanuit JS -->
-                    <option value="boom">Boom</option>
-                    <option value="clap">Clap</option>
-                </select>
-              </div>
-              <div class="nav-item-wrapper">
-                  <label for="pad2">Pad 2</label>
-                  <select name="pad2" id="pad2" data-key="104">
-                      <!-- options vanuit JS -->
-                  </select>
-              </div>
-              <div class="nav-item-wrapper">
-                  <label for="pad3">Pad 3</label>
-                  <select name="pad3" id="pad3" data-key="105">
-                      <!-- options vanuit JS -->
-                  </select>
-              </div>
-              <div class="nav-item-wrapper">
-                  <label for="pad4">Pad 4</label>
-                  <select name="pad54" id="pad4" data-key="100">
-                      <!-- options vanuit JS -->
-                  </select>
-              </div>
-              <div class="nav-item-wrapper">
-                  <label for="pad5">Pad 5</label>
-                  <select name="pad5" id="pad5" data-key="101">
-                      <!-- options vanuit JS -->
-                  </select>
-              </div>
-              <div class="nav-item-wrapper">
-                  <label for="pad6">Pad 6</label>
-                  <select name="pad6" id="pad6" data-key="102">
-                      <!-- options vanuit JS -->
-                  </select>
-              </div>
-              <div class="nav-item-wrapper">
-                  <label for="pad7">Pad 7</label>
-                  <select name="pad7" id="pad7" data-key="97">
-                      <!-- options vanuit JS -->
-                  </select>
-              </div>
-              <div class="nav-item-wrapper">
-                  <label for="pad8">Pad 8</label>
-                  <select name="pad8" id="pad8" data-key="98">
-                      <!-- options vanuit JS -->
-                  </select>
-              </div>
-              <div class="nav-item-wrapper">
-                  <label for="pad9">Pad 9</label>
-                  <select name="pad9" id="pad9" data-key="99">
-                      <!-- options vanuit JS -->
-                  </select>
-              </div>
-          </div>
-          <div class="close-wrapper" onclick="closeMenu()">
-            <img src="img/close.svg" alt="img sluiten">
+		<!-- <button onclick="playsound()">Klik mij</button> -->
+    <div class="drumpad-wrapper">
+      <div class="drumpad-navbar">
+        <div class="drumpad-logo-wrapper">
+          <div class="drumpad-logo">
+            Drumpad
           </div>
         </div>
-        <div class="nav-button-wrapper" onclick="openMenu()">
-          <div class="menu-stripe"></div>
-          <div class="menu-stripe small-stripe"></div>
-          <div class="menu-stripe"></div>
+        <div class="nav-menu">
+          <div class="nav-items-container">
+            <div class="nav-item-wrapper">
+              <label for="pad1">Pad 1</label>
+                  <select name="pad1" id="pad1" data-key="103">
+                      <!-- options vanuit JS -->
+                      <option value="boom">Boom</option>
+                      <option value="clap">Clap</option>
+                  </select>
+                </div>
+                <div class="nav-item-wrapper">
+                    <label for="pad2">Pad 2</label>
+                    <select name="pad2" id="pad2" data-key="104">
+                        <!-- options vanuit JS -->
+                    </select>
+                </div>
+                <div class="nav-item-wrapper">
+                    <label for="pad3">Pad 3</label>
+                    <select name="pad3" id="pad3" data-key="105">
+                        <!-- options vanuit JS -->
+                    </select>
+                </div>
+                <div class="nav-item-wrapper">
+                    <label for="pad4">Pad 4</label>
+                    <select name="pad54" id="pad4" data-key="100">
+                        <!-- options vanuit JS -->
+                    </select>
+                </div>
+                <div class="nav-item-wrapper">
+                    <label for="pad5">Pad 5</label>
+                    <select name="pad5" id="pad5" data-key="101">
+                        <!-- options vanuit JS -->
+                    </select>
+                </div>
+                <div class="nav-item-wrapper">
+                    <label for="pad6">Pad 6</label>
+                    <select name="pad6" id="pad6" data-key="102">
+                        <!-- options vanuit JS -->
+                    </select>
+                </div>
+                <div class="nav-item-wrapper">
+                    <label for="pad7">Pad 7</label>
+                    <select name="pad7" id="pad7" data-key="97">
+                        <!-- options vanuit JS -->
+                    </select>
+                </div>
+                <div class="nav-item-wrapper">
+                    <label for="pad8">Pad 8</label>
+                    <select name="pad8" id="pad8" data-key="98">
+                        <!-- options vanuit JS -->
+                    </select>
+                </div>
+                <div class="nav-item-wrapper">
+                    <label for="pad9">Pad 9</label>
+                    <select name="pad9" id="pad9" data-key="99">
+                        <!-- options vanuit JS -->
+                    </select>
+                </div>
+            </div>
+            <div class="close-wrapper" onclick="closeMenu()">
+              <img src="img/close.svg" alt="img sluiten">
+            </div>
+          </div>
+          <div class="nav-button-wrapper" onclick="openMenu()">
+            <div class="menu-stripe"></div>
+            <div class="menu-stripe small-stripe"></div>
+            <div class="menu-stripe"></div>
+          </div>
+        </div>
+        <div class="drumpad-grid" id="drum-grid">
+          <div class="drumpad-drum-item" data-key="103">
+            <div class="drumpad-img-wrapper">
+              <img src="img/base.svg" alt="img instrument">
+            </div>
+          </div>
         </div>
       </div>
-      <div class="drumpad-grid" id="drum-grid">
-        <div class="drumpad-drum-item" data-key="103">
-          <div class="drumpad-img-wrapper">
-            <img src="img/base.svg" alt="img instrument">
-          </div>
-        </div>
-      </div>
-    </div>
   <script src="script.js"></script>
 </body>
 </html>
