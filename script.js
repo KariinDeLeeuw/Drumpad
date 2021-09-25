@@ -15,14 +15,25 @@ function closeMenu() {
 }
 
 //Voeg een keydown functie toe, waarbij je het geluid met de toetsenbord kan besturen. En voeg een keyCode toe, elke toets op het toetenbord heeft een nummer. https://keycode.info/
-window.addEventListener('keydown', function(e){
-  console.log(e.keyCode);
-});
+window.addEventListener('keydown', function(e) {
+    console.log(e.keyCode);
+    playsound(e.keyCode);
+  });
 
-function playsound () {
-  var geluid = new Audio('sounds/boom.wav');
-  geluid.play();
-}
+  function playsound(key) {
+    for (i = 0; i < drumpadSounds.length; i++) {
+      if (key == drumpadSounds[i].key) {
+        console.log(key + "found");
+        drumpadSounds[i].soundLink.currentTime = 0; // zet audio weer op begin
+        drumpadSounds[i].soundLink.play();
+        var drumItem = document.querySelector(".drumpad-drum-item[data-key='" + key + "']");
+        drumItem.classList.add("playing");
+        setTimeout(function() {
+          drumItem.classList.remove("playing");
+        }, 200)
+      }
+    }
+  }
 
 //Hier wordt de drumpad geladen waarbij een for loop wordt gebruikt. Alle 9 drumpadSounds worden gelopen.
 function loadPad () {
