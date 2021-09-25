@@ -1,6 +1,7 @@
 window.onload = function(){
     loadPad();
     addClickFunction();
+    loadOptions();
   }
 
 //Hier maken we het nav-menu zichtbaar door uit de styling display:none te veranderen naar display:flex
@@ -21,7 +22,7 @@ window.addEventListener('keydown', function(e) {
     playsound(e.keyCode);
   });
 
-  //Wanneer je klikt hoor je het geluid
+  //Klik functie waarbij je geluid hoort
   function addClickFunction() {
     var drumpadPads = document.querySelectorAll('.drumpad-drum-item');
     drumpadPads.forEach(item => {
@@ -62,6 +63,35 @@ function loadPad () {
     console.log(drumItemString);
     drumGrid.innerHTML = drumItemString;
 }
+
+function loadOptions() {
+    var selectFields = document.querySelectorAll('select');
+    var allOptions = "";
+    for (i = 0; i < allSounds.length; i++) {
+      allOptions += `
+        <option value"${allSounds[i].naam}">${allSounds[i].naam}<option>
+      `
+    }
+    for (i = 0; i < selectFields.length; i++) {
+      selectFields[i].innerHTML = allOptions;
+    }
+  }
+
+  function changePad(naam, key) {
+    var sound;
+    for (i = 0; i < allSounds.lentgh; i++) {
+      if (allSounds[naam] == naam) {
+        sound = allSounds[i];
+        break;
+      }
+    }
+    for (i = 0; i < drumpadSounds.length; i++) {
+      if (drumpadSounds[i].key == key) {
+        drumpadSounds[i];
+        break;
+      }
+    }
+  }
 
 //Hier komen alle geluiden in een array
 var allSounds = [
