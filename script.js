@@ -1,6 +1,7 @@
 window.onload = function(){
     loadPad();
-}
+    addClickFunction();
+  }
 
 //Hier maken we het nav-menu zichtbaar door uit de styling display:none te veranderen naar display:flex
 function openMenu() {
