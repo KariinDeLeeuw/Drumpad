@@ -49,7 +49,7 @@ window.onload = function(){
     }
   }
 
-  //Hier wordt de drumpad geladen waarbij een for loop wordt gebruikt. Alle 9 drumpadSounds worden gelopen.
+  //Hier wordt de drumpad geladen waarbij een for loop wordt gebruikt. Alle 9 drumpadSounds worden doorgelopen.
   function loadPad() {
     var drumGrid = document.getElementById('drum-grid');
     var drumItemsString = "";
